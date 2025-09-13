@@ -5,10 +5,8 @@ import Navbar from './component/navbar';
 import styles from '../app/css/home.module.css';
 import Image from 'next/image';
 import React from 'react';
-import nitin from '../app/public/image/nitinpic.jpg';
-import theus from '../app/public/image/Group 270.jpg';
-import lion from '../app/public/image/lion.jpg';
-
+import Link from 'next/link';
+import nitin from '../../public/nitin.jpg';
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -40,7 +38,7 @@ export default function Home() {
     const resumeUrl = '/resume/nitin-kumar-resume.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
-    link.download = 'Nitin-Kumar-MERN-Developer-Resume.pdf';
+    link.download = '/resume/nitin-kumar-resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -84,14 +82,7 @@ export default function Home() {
           </div>
           <div className={styles.heroImage}>
             <div className={styles.profileImageContainer}>
-              <Image
-                src={nitin}
-                alt="Nitin - MERN Stack Developer"
-                width={300}
-                height={300}
-                className={styles.profileImage}
-                priority
-              />
+              <Image src={nitin} alt="Nitin Kumar" className={styles.profileImage} width={400} height={400}/>
             </div>
           </div>
         </section>
@@ -116,8 +107,9 @@ export default function Home() {
                   <h3>Want to know more about my experience?</h3>
                   <div className={styles.resumeButtons}>
                     <button onClick={handleResumeView} className={styles.btnResumeView}>
-                      <span className={styles.resumeIcon}>👀</span>
+                     <span className={styles.resumeIcon}>👀</span>
                       View Resume
+                    
                     </button>
                     <button onClick={handleResumeDownload} className={styles.btnResumeDownload}>
                       <span className={styles.resumeIcon}>⬇️</span>
@@ -182,7 +174,7 @@ export default function Home() {
 
               <div className={`${styles.projectCard} ${styles.slideUp}`}>
                 <div className={styles.projectImage}>
-                  <div className={styles.projectPlaceholder}><Image src={theus}/></div>
+                  <div className={styles.projectPlaceholder}><img src="" alt="" /></div>
                 </div>
                 <div className={styles.projectInfo}>
                   <h3>TheUSsoftware.com</h3>
@@ -202,7 +194,7 @@ export default function Home() {
 
               <div className={`${styles.projectCard} ${styles.slideUp}`}>
                 <div className={styles.projectImage}>
-                  <div className={styles.projectPlaceholder}><Image src={lion}/></div>
+                  <div className={styles.projectPlaceholder}><img src="" alt="" /></div>
                 </div>
                 <div className={styles.projectInfo}>
                   <h3>Lion Tech</h3>
