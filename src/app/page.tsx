@@ -174,7 +174,7 @@ export default function Home() {
 
               <div className={`${styles.projectCard} ${styles.slideUp}`}>
                 <div className={styles.projectImage}>
-                  <div className={styles.projectPlaceholder}><img src="" alt="" /></div>
+                  <div className={styles.projectPlaceholder}><span>TheUSsoftware.com</span></div>
                 </div>
                 <div className={styles.projectInfo}>
                   <h3>TheUSsoftware.com</h3>
@@ -194,7 +194,7 @@ export default function Home() {
 
               <div className={`${styles.projectCard} ${styles.slideUp}`}>
                 <div className={styles.projectImage}>
-                  <div className={styles.projectPlaceholder}><img src="" alt="" /></div>
+                  <div className={styles.projectPlaceholder}><span>Lion Tech</span></div>
                 </div>
                 <div className={styles.projectInfo}>
                   <h3>Lion Tech</h3>
